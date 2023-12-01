@@ -1,0 +1,14 @@
+<div>
+          <span className="cart-badge">
+            {loading ? '0' : cartItems.reduce((a, c) => a + c.qty, 0)}
+          </span>
+          <Link href="/cart" className="flex justify-between items-end cursor-pointer">
+                            <FaShoppingCart />
+
+          </Link>
+          {!loading && cartItems.length > 0 && pathname !== '/cart' && (
+            <div className="caret"></div>
+          )}
+        </div>
+            <li className="m-2 hover:border-2 hover:scale-1050 hover:border-blue-950 dark:hover:border-green-300 rounded-full px-3 transition-all ease-in-out duration-100">
+                  <FaShoppingCart />

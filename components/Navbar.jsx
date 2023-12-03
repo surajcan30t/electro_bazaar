@@ -21,7 +21,7 @@ export default function Navbar() {
               <Image src="/logo.jpg" width={40} height={40} alt="/" />
             </Link>
             <Link href="/">
-              <span className="m-2 md:text-3xl text-white text-2xl font-bold">
+              <span className="m-2 md:text-3xl text-cyan-200 text-2xl font-bold">
                 ELECTRO BAZAR
               </span>
             </Link>
@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="search-bar flex items-center">
             <input
               type="text"
-              className="w-[20rem] p-[0.5rem] text-black border-2 border-black rounded-xl"
+              className="w-[20rem] p-[0.5rem] bg-slate-300 text-black ring-0 rounded-full"
               placeholder="Search Here..."
             />
             <button className="sbtn p-[0.2rem] bg-transparent text-white cursor-pointer text-xl font-bold">
@@ -41,33 +41,27 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <div className="hidden md:block">
               <ul className="flex justify-center text-while items-center mx-9">
-                <Link href="./home">
-                  <li className="m-2 hover:border-2 hover:scale-1050 hover:border-blue-950 dark:hover:border-green-300 rounded-full px-3 transition-all ease-in-out duration-100">
+                {/* <Link href="./home">
+                  <li className="m-2 hover:text-cyan-200 hover:scale-110 rounded-full px-3 transition-all ease-in-out duration-100">
                     Home
                   </li>
-                </Link>
-                <Link href="/events"></Link>
+                </Link> */}
                 <Link href="/about">
-                  <li className="m-2 hover:border-2 hover:scale-1050 hover:border-blue-950 dark:hover:border-green-300 rounded-full px-3 transition-all ease-in-out duration-100">
+                  <li className="m-2 hover:text-cyan-200 hover:scale-110 rounded-full px-3 transition-all ease-in-out duration-100">
                     About
                   </li>
                 </Link>
                 <Link href="/login">
-                  <li className="m-2 hover:border-2 hover:scale-1050 hover:border-blue-950 dark:hover:border-green-300 rounded-full px-3 transition-all ease-in-out duration-100">
+                  <li className="m-2 hover:text-cyan-200 hover:scale-110 rounded-full px-3 transition-all ease-in-out duration-100">
                     Login
                   </li>
                 </Link>
                 <Link href="/cart">
-                  <li>
+                  <li className="flex flex-row-reverse justify-center items-center gap-2 hover:text-cyan-200 hover:scale-110">
                     <span className="cart-badge">
                       {loading ? "0" : cartItems.reduce((a, c) => a + c.qty, 0)}
                     </span>
-                    <Link
-                      href="/cart"
-                      className="flex justify-between items-end cursor-pointer"
-                    >
                       <FaShoppingCart />
-                    </Link>
                     {!loading &&
                       cartItems.length > 0 &&
                       pathname !== "/cart" && <div className="caret"></div>}

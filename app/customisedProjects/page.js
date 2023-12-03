@@ -17,7 +17,7 @@ const Page = () => {
     };
 
     return (
-        <div className="container mx-auto mt-24">
+        <div className="container mx-auto mt-10 mb-10">
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                 <div className="mb-4">
                     <label htmlFor="projectName" className="block mb-2 font-bold">
@@ -86,7 +86,7 @@ const Page = () => {
                 </div>
                 <button
                     type="submit"
-                    className="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                    className="w-full px-4 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-900"
                 >
                     Submit
                 </button>

@@ -1,16 +1,16 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import {category} from "@/utils/category"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { category } from "@/utils/category";
+import AddToCart from "@/components/AddToCart";
 import { FaArrowLeft } from "react-icons/fa";
-
 // import AddToCart from '@/components/AddToCart'
 
-
 const page = async ({ params: { id } }) => {
-    const product = category.categories.find((x) => x.id === id)
+  const product = category.categories.find((x) => x.id === id);
+  console.log(product);
   if (!product) {
-    return <div>Product Not Found</div>
+    return <div>Product Not Found</div>;
   }
   return (
     <div>
@@ -26,36 +26,28 @@ const page = async ({ params: { id } }) => {
             className='absolute object-contain object-center'
           />
         </div>
-        <div>
-          <ul>
-            <li>
-              <h1 className="text-2xl text-black">{product.title}</h1>
-            </li>
-            <li>
-            <h1 className="text-xl mt-5">Rs.  {product.price}</h1>
-            </li>
-
-
-            {/* <li>
-              <hr className="my-3" />
-              Description:
-              <p>{product.description}</p>
-            </li> */}
-          </ul>
+        <div className="flex flex-col mt-20">
+          <div className="text-2xl text-black capitalize font-bold">
+            {product.title}
+          </div>
+          <div>
+            <br />
+            <hr />
+            <div className="card p-5 flex flex-col">
+              <div className="mb-2 flex gap-2">
+                <div>MRP</div>
+                <div>&#8377;{product.price}</div>
+              </div>
+              <AddToCart product={product} redirect={true} />
+            </div>
+          </div>
         </div>
         <div>
-          {/* <div className="card p-5">
-            <div className="mb-2 flex justify-between">
-              <div>Price</div>
-              <div>&#8377;{product.price}</div>
-            </div> */}
-
-            {/* <AddToCart product={product} redirect={true} /> */}
-          {/* </div> */}
+          
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

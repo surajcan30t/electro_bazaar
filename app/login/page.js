@@ -21,7 +21,7 @@ const handleClick = () =>{
   return (
     <>
     <div className="relative upload">
-		<div className='absolute top-0 left-0 w-screen h-screen'>
+		<div className='absolute top-0 left-0 h-[91vh] min-w-[99.5vw] max-w-[99.5vw]'>
 		<Image src={'/elearth1.jpg'} fill className='object-cover object-center'/>
 		</div>
       {/* <div className="bubble1"></div>
@@ -32,23 +32,23 @@ const handleClick = () =>{
 			  {!isLogin?(
       	  	<div className="flex flex-col m-2">
           		<label htmlFor="uid">Enter your User Name<span className='text-red-600'>*</span> </label>
-          		<input type='text' placeholder='Mr Bean' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800'></input>
+          		<input type='text' placeholder='Mr Bean' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800' required></input>
         	</div>
 			):null}
       	  	<div className="flex flex-col m-2">
           		<label htmlFor="cont">Enter your Email ID<span className='text-red-600'>*</span> </label>
-          		<input type='text' placeholder='bean@eating.com' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800'></input>
+          		<input type='text' placeholder='bean@ping.com' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800' required></input>
         	</div>
 			
         	<div className="flex flex-col m-2">
           		<label htmlFor="cont">password<span className='text-red-600'>*</span></label>
-          		<input type='password' placeholder='bean@pwd' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800'></input>
+          		<input type='password' placeholder='bean@pwd' className='border-2 border-black p-2 rounded-lg text-white bg-slate-800' required></input>
         	</div>
 			<div>
 				{!isLogin?(<div onClick={handleLogin} >already have an account? <u className='cursor-pointer'>log in</u></div>):(<div onClick={handleLogin}>don't have an account <u className='cursor-pointer'>sign up</u></div>)}
 			</div>
 			<div className='flex justify-center item-center'>
-				<button onClick={() =>{router.push('/')}} className='w-48 bg-green-600 text-white p-2 rounded-lg mt-4'>{isLogin?'Login':'Sign up'}</button>
+				<button onClick={handleClick} className='w-48 bg-green-600 text-white p-2 rounded-lg mt-4'>{isLogin?'Login':'Sign up'}</button>
 
 			</div>
 		</div>

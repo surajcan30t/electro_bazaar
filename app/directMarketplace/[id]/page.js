@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { category } from "@/utils/category";
 import AddToCart from "@/components/AddToCart";
+import { FaArrowLeft } from "react-icons/fa";
 // import AddToCart from '@/components/AddToCart'
 
 const page = async ({ params: { id } }) => {
@@ -13,40 +14,36 @@ const page = async ({ params: { id } }) => {
   }
   return (
     <div>
-      <div className="py-2">
-        <Link href="./">back to products</Link>
+      <div className="pl-20 pt-5 text-xl text-center">
+        <Link href="./"><FaArrowLeft /></Link>
       </div>
       <div className="grid md:grid-cols-4 md:gap-3">
-        <div className="md:col-span-2">
+        <div className="relative w-[35vw] h-[60vh] mt-5 md:col-span-2 ml-20 border-[2px] border-gray-400 rounded-lg" >
           <Image
             src={product.image}
             alt={product.title}
-            width={500}
-            height={100}
+            fill
+            className='absolute object-contain object-center'
           />
         </div>
-        <div>
-          <ul>
-            <li>
-              <div className="text-lg">{product.title}</div>
-            </li>
-
-            {/* <li>
-              <hr className="my-3" />
-              Description:
-              <p>{product.description}</p>
-            </li> */}
-          </ul>
+        <div className="flex flex-col mt-20">
+          <div className="text-2xl text-black capitalize font-bold">
+            {product.title}
+          </div>
           <div>
+            <br />
+            <hr />
             <div className="card p-5 flex flex-col">
-              <div className="mb-2 flex justify-between">
-                <div>Price</div>
+              <div className="mb-2 flex gap-2">
+                <div>MRP</div>
                 <div>&#8377;{product.price}</div>
               </div>
               <AddToCart product={product} redirect={true} />
-
             </div>
           </div>
+        </div>
+        <div>
+          
         </div>
       </div>
     </div>

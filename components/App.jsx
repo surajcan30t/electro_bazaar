@@ -1,4 +1,4 @@
-'use client'
+
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { hideLoading } from '@/redux/slices/cartSlice'
@@ -26,7 +26,7 @@ export default function App({ children }) {
         }`}
       >
         <Navbar />
-        <main className="p-4">{children}</main>
+        <main>{children}</main>
       </div>
     </div>
   )

@@ -20,7 +20,7 @@ export default function CartPage() {
   }
 
   return (
-    <div>
+    <div className=' bg-slate-950 text-white text-center'>
       <h1 className="mb-4 text-xl">Shopping Cart</h1>
       {loading ? (
         <div>Loading...</div>
@@ -34,7 +34,7 @@ export default function CartPage() {
             <table className="min-w-full">
               <thead className="border-b">
                 <tr>
-                  <th className="p-5 text-left">Product</th>
+                  <th className="p-5 text-center">Product</th>
                   <th className="p-5 text-right">Quantity</th>
                   <th className="p-5 text-right">Price</th>
                   <th className="p-5">Action</th>
@@ -43,22 +43,24 @@ export default function CartPage() {
               <tbody>
                 {cartItems.map((item) => (
                   <tr key={item.id} className="border-b">
-                    <td>
+                    <td className='w-96'>
                       <Link
                         href={`/product/${item.id}`}
-                        className="flex items-center"
+                        className="text-white ml-3"
                       >
-                        <img
+                        {/* <img
                           src={item.image}
                           alt={item.name}
                           className="p-1"
-                        ></img>
-                        {item.name}
+                        ></img> */}
+
+                        {item.title}
                       </Link>
                     </td>
-                    <td className="p-5 text-right">
+                    <td className=" text-right">
                       <select
                         value={item.qty}
+                        className='bg-slate-800 text-white'
                         onChange={(e) =>
                           addToCartHandler(item, Number(e.target.value))
                         }

@@ -17,8 +17,8 @@ const Page = () => {
     };
 
     return (
-        <div className="container mx-auto mt-10 mb-10">
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <div className="bg-slate-950 container flex mx-auto">
+            <form onSubmit={handleSubmit} className="bg-slate-400 w-[30vw] max-w-md mx-auto p-5 px-10 mt-20 mb-20">
                 <div className="mb-4">
                     <label htmlFor="projectName" className="block mb-2 font-bold">
                         Project Name
@@ -26,7 +26,7 @@ const Page = () => {
                     <input
                         type="text"
                         id="projectName"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        className="bg-slate-700 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         value={projectName}
                         onChange={(e) => setProjectName(e.target.value)}
                     />
@@ -38,7 +38,7 @@ const Page = () => {
                     <textarea
                         type="text"
                         id="projectInfo"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        className="bg-slate-700 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         rows='4'
                         limit='10'
                         value={projectInfo}
@@ -52,7 +52,7 @@ const Page = () => {
                     <textarea
                         type="text"
                         id="projectComponents"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        className="bg-slate-700 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         value={projectComponents}
                         rows='10'
                         placeholder='Enter the components required for your project'

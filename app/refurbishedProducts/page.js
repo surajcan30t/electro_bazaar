@@ -51,7 +51,7 @@ const page = () => {
                     {product.title}
                   </h3>
                 </div>
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-lg font-extrabold text-black rounded">
                   &#8377;{product.price}
                 </p>
               </div>

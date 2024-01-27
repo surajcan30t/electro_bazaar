@@ -11,7 +11,7 @@ export const category = {
             "id": "2",
             "title": "100Pcs. 1/4W Metal Film Resistors Assortment for DIY Electronic Projects and Experiments",
             "countInStock": 7,
-            "price": 106,
+            "price": 1060,
             "image": "https://robu.in/wp-content/uploads/2019/03/100pcs-Resistor-Kit-4-314x252.jpg"
         },
         {

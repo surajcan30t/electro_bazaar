@@ -39,7 +39,7 @@ const page = () => {
                   />
                 </Link>
               </div>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex justify-between gap-5">
                 <div>
                   <h3 className="text-sm text-gray-700 line-clamp-2">
                     <span
@@ -49,7 +49,7 @@ const page = () => {
                     {product.title}
                   </h3>
                 </div>
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-lg font-extrabold text-black rounded">
                   &#8377;{product.price}
                 </p>
               </div>

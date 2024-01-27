@@ -35,7 +35,7 @@ const page = async ({ params: { id } }) => {
             <br />
             <hr />
             <div className="card p-5 flex flex-col">
-              <div className="mb-2 flex gap-2">
+              <div className="mb-2 w-fit flex gap-2 bg-slate-800 text-white font-semibold text-lg rounded-lg px-2 py-1">
                 <div>MRP</div>
                 <div>&#8377;{product.price}</div>
               </div>

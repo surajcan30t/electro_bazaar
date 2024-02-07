@@ -10,7 +10,7 @@ const page = (addToCart) => {
   console.log(categories);
   return (
     <div>
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="ml-60 my-5 max-w-2xl px-4 py-5 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">
           PRODUCTS
         </h2>
@@ -22,24 +22,26 @@ const page = (addToCart) => {
           robu take extra pride in providing the highest quality products to
           fulfill your ideas at the best price. All products are shipped within
           24 hours and delivered right to your doorstep with the minimum
-          shipping charges
+          shipping charges.
         </p>
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 font-bold">
+        <div className="mt-6 grid grid-cols-2 gap-x-0 gap-y-5 xl:gap-x-0 font-bold">
           {categories.map((product) => (
             <div
               key={product.id}
-              className="group relative m-2 shadow-slate-800 shadow-md rounded-lg p-2"
+              className="relative flex flex-row m-2 rounded-lg p-2 w-[38vw] border-[1px] border-slate-200 hover:border-slate-950 hover:shadow-lg"
             >
-              <div className="relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-52">
+              <div className="relative aspect-h-1 w-1/3 overflow-hidden rounded-md bg-gray-300 lg:aspect-none lg:h-52">
                 <Link href={`/directMarketplace/${product.id}`}>
                   <img
                     src={product.image}
                     alt={"alt"}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    width={200}
+                    height={200}
+                    className="object-cover h-full w-full object-center"
                   />
                 </Link>
               </div>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 w-2/3 flex flex-col gap-32 mx-4">
                 <div>
                   <h3 className="text-sm text-gray-700 line-clamp-2">
                     <span
@@ -58,6 +60,9 @@ const page = (addToCart) => {
         </div>
       </div>
     </div>
+
+
+    
   );
 };
 

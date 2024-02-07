@@ -30,10 +30,10 @@ export default function Navbar() {
           <div className="search-bar flex items-center">
             <input
               type="text"
-              className="w-[20rem] p-[0.5rem] bg-slate-300 text-black ring-0 rounded-full"
+              className="w-[20rem] p-[0.5rem] placeholder:text-slate-900 bg-slate-300 text-black ring-0 rounded-full"
               placeholder="Search Here..."
             />
-            <button className="sbtn p-[0.2rem] bg-transparent text-white cursor-pointer text-xl font-bold">
+            <button className="sbtn p-[0.2rem] bg-transparent text-white cursor-pointer text-xl font-bold transition-all ease-in hover:scale-110 hover:rotate-6">
               <IoSearchOutline />
             </button>
           </div>
